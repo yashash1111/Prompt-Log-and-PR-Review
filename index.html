@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <title>NovaShop — Modern E‑commerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+  <body>
+    <a href="#top" id="top" class="sr-only">Skip to content</a>
+    <header class="site-header sticky">
+      <div class="container nav">
+        <a class="logo" href="index.html"><span class="logo-dot"></span>NovaShop</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="products.html">All Products</a>
+          <a href="#" class="nav-dropdown" data-dropdown="categories">Categories ▾</a>
+          <div class="dropdown" id="dropdown-categories" role="menu" aria-hidden="true">
+            <a href="products.html?category=electronics">Electronics</a>
+            <a href="products.html?category=fashion">Fashion</a>
+            <a href="products.html?category=home">Home</a>
+            <a href="products.html?category=fitness">Fitness</a>
+          </div>
+        </nav>
+        <form class="search" role="search" aria-label="Site" action="products.html">
+          <input name="q" type="search" placeholder="Search for products..." aria-label="Search products" />
+          <button type="submit" aria-label="Search">🔍</button>
+        </form>
+        <div class="nav-actions">
+          <button class="icon-btn" id="open-login" aria-haspopup="dialog" aria-controls="login-modal" aria-label="Login">
+            👤
+          </button>
+          <a class="icon-btn cart-link" href="cart.html" aria-label="Cart">
+            🛒 <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </div>
+        <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container page" data-page="home">
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover. Desire. <span class="accent">Delivered.</span></h1>
+          <p>Shop curated collections of electronics, fashion, fitness and more — crafted for everyday excellence.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="products.html">Shop Now</a>
+            <a class="btn ghost" href="products.html?category=electronics">Explore Electronics</a>
+          </div>
+        </div>
+        <div class="hero-slider" aria-label="Featured promotions">
+          <div class="slides">
+            <div class="slide active" style="--bg:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1600&auto=format&fit=crop')">
+              <div class="slide-caption"><strong>Work smarter.</strong> Laptops up to 30% off.</div>
+            </div>
+            <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1520975922284-7b12d63a0ead?q=80&w=1600&auto=format&fit=crop')">
+              <div class="slide-caption"><strong>Sound on.</strong> Premium audio deals.</div>
+            </div>
+            <div class="slide" style="--bg:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop')">
+              <div class="slide-caption"><strong>Fit for more.</strong> Gear to move you.</div>
+            </div>
+          </div>
+          <div class="dots" role="tablist" aria-label="Slides">
+            <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo-grid">
+        <a class="promo card" href="products.html?category=fashion">
+          <span>New Season Fashion</span>
+          <strong>Fresh fits · 25% off</strong>
+        </a>
+        <a class="promo card" href="products.html?category=home">
+          <span>Home Essentials</span>
+          <strong>Make space for joy</strong>
+        </a>
+        <a class="promo card" href="products.html?category=fitness">
+          <span>Fitness Fuel</span>
+          <strong>Crush your goals</strong>
+        </a>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Featured products</h2>
+          <a class="link" href="products.html">View all →</a>
+        </div>
+        <div id="featured" class="grid products"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo footer-logo" href="index.html"><span class="logo-dot"></span>NovaShop</a>
+          <p>Your one‑stop shop for modern essentials.</p>
+          <div class="social">
+            <a href="#" aria-label="Twitter" title="Twitter">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.7.4-1.6.8-2.5 1-1.4-1.5-3.7-1.6-5.2-.2-1.1 1-1.5 2.6-1 4-3-.2-5.7-1.6-7.6-3.9-1 1.8-.5 4.1 1.2 5.3-.6 0-1.2-.2-1.7-.5v.1c0 2 1.4 3.8 3.3 4.2-.6.2-1.2.2-1.8.1.5 1.7 2.1 2.9 3.9 3-1.5 1.2-3.4 1.8-5.3 1.8h-1c1.9 1.2 4.1 1.8 6.3 1.8 7.6 0 11.9-6.5 11.9-12.1v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.8 15.6V8.4l6.3 3.6z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Returns</a>
+          <a href="#">Shipping</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> NovaShop. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <!-- Login/Register Modal -->
+    <dialog id="login-modal" class="modal">
+      <form method="dialog" class="modal-card" id="auth-form">
+        <button class="modal-close" aria-label="Close">✕</button>
+        <h3>Welcome back</h3>
+        <p class="muted">Sign in or create a new account</p>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="login" role="tab" aria-selected="true">Login</button>
+          <button class="tab" data-tab="register" role="tab" aria-selected="false">Register</button>
+        </div>
+        <div class="tab-panels">
+          <div class="tab-panel active" id="panel-login">
+            <label>Email <input type="email" required placeholder="you@example.com" /></label>
+            <label>Password <input type="password" required placeholder="••••••••" /></label>
+            <button class="btn primary" value="close">Sign In</button>
+          </div>
+          <div class="tab-panel" id="panel-register">
+            <label>Name <input type="text" required placeholder="Your Name" /></label>
+            <label>Email <input type="email" required placeholder="you@example.com" /></label>
+            <label>Password <input type="password" required placeholder="Create a password" /></label>
+            <button class="btn primary" value="close">Create Account</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
